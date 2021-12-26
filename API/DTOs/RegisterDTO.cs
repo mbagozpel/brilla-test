@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace API.DTOs
+{
+    public class RegisterDTO
+    {
+        [Required]
+        public string Email { get; set; }
+        [Required]
+        public string PhoneNumber { get; set; }
+        [Required]
+        public string Username { get; set; }
+        public IEnumerable<string> Interests { get; set; }
+        public IFormFile ImageFile { get; set; }
+    }
+}
