@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace API.DTOs
 {
@@ -16,5 +12,10 @@ namespace API.DTOs
         public string Username { get; set; }
         public IEnumerable<string> Interests { get; set; }
         public IFormFile ImageFile { get; set; }
+        public string ImageName { get; set; }
+
+        [Required]
+        [StringLength(20, MinimumLength =8)]
+        public string Password {get; set;}
     }
 }
